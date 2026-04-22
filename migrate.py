@@ -12,14 +12,19 @@ async def migrate():
             eye_color TEXT,
             gender TEXT,
             hair_color TEXT,
-            homeworld TEXT,
+            height TEXT,
             mass TEXT,
             name TEXT,
-            skin_color TEXT
+            skin_color TEXT,
+            homeworld TEXT,
+            films TEXT,
+            species TEXT,
+            starships TEXT,
+            vehicles TEXT
         )
         """
         await database.execute(query)
-        print("Таблица 'characters' успешно создана или уже существует.")
+        print("Миграция выполнена: таблица 'characters' готова к работе.")
 
 if __name__ == "__main__":
     asyncio.run(migrate())
